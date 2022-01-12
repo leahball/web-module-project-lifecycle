@@ -5,9 +5,9 @@ class FollowerList extends React.Component {
   render() {
     return (
       <div id="followers">
-        <Follower />
-        <Follower />
-        <Follower />
+        {this.props.followers.map((follower) => {
+          return <Follower follower={follower} />;
+        })}
       </div>
     );
   }
